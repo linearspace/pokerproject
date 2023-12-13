@@ -31,6 +31,8 @@ final class MainController: UIViewController{
         button.backgroundColor = .black
         button.setTitleColor(.white, for: .normal)
         button.frame = CGRect(x: 100, y: 500, width: 200, height: 50)
+        
+        button.layer.cornerRadius = button.frame.height/2
         button.addTarget(self, action: #selector(didTabButton), for: .touchUpInside)
     }
     @objc private func didTabButton(){
