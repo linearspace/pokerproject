@@ -168,7 +168,7 @@ extension TestController: UITableViewDelegate {
         let alert = UIAlertController(title: "Edit Amount", message: "Enter the current player's amount", preferredStyle: .alert)
         alert.addTextField {
             textField in
-            textField.text = "\(selectedPlayer.amount)"
+            textField.text = "\(selectedPlayer.now)"
             textField.keyboardType = .numberPad
         }
         
