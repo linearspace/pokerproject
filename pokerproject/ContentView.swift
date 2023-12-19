@@ -11,14 +11,24 @@ struct ContentView: UIViewControllerRepresentable {
     }
 }
 
-
-struct Player {
-    let name: String
-    let amount: Int
+protocol PlayerType {
+    var name: String { get }
+    var amount: Int { get }
+    var now: Int { get set }
 }
 
+class Player : PlayerType {
+    let name: String
+    let amount: Int
+    var now: Int
+    init(name: String, amount: Int) {
+        self.name = name
+        self.amount = amount
+        self.now = amount
+    }
+}
 
-
+var isStarted: Bool = true // bad?? TODO: make button for session start/end
 
 final class MainController: UIViewController{
     private let button = UIButton()
@@ -137,7 +147,7 @@ extension TestController: UITableViewDataSource {
         cell.textLabel?.font = .boldSystemFont(ofSize: CGFloat(integerLiteral: 20))
         
         let balanceLabel = UILabel()
-        balanceLabel.text = "\(player.amount) £"
+        balanceLabel.text = "\(player.amount) £ —> \(player.now) £"
         balanceLabel.textColor = .black
         balanceLabel.font = .italicSystemFont(ofSize: CGFloat(integerLiteral: 15))
         balanceLabel.textAlignment = .center
@@ -150,11 +160,28 @@ extension TestController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-
 extension TestController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard isStarted else { tableView.deselectRow(at: indexPath, animated: true); return }
+        let selectedPlayer = players[indexPath.row]
         
+        let alert = UIAlertController(title: "Edit Amount", message: "Enter the current player's amount", preferredStyle: .alert)
+        alert.addTextField {
+            textField in
+            textField.text = "\(selectedPlayer.amount)"
+            textField.keyboardType = .numberPad
+        }
+        
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { _ in
+            if let amountString = alert.textFields?[0].text,
+               let newAmount = Int(amountString) {
+                self.players[indexPath.row].now = newAmount
+                self.tableView.reloadData()
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alert, animated: true)
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
