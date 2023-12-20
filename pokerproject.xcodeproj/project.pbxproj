@@ -14,6 +14,15 @@
 		11110C162B049C7D0048AE8D /* pokerprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11110C152B049C7D0048AE8D /* pokerprojectTests.swift */; };
 		11110C202B049C7D0048AE8D /* pokerprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11110C1F2B049C7D0048AE8D /* pokerprojectUITests.swift */; };
 		11110C222B049C7D0048AE8D /* pokerprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11110C212B049C7D0048AE8D /* pokerprojectUITestsLaunchTests.swift */; };
+		ECB3098F2B3352F6009618D8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3098E2B3352F6009618D8 /* Player.swift */; };
+		ECB309912B335319009618D8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB309902B335319009618D8 /* MainViewController.swift */; };
+		ECB309932B335341009618D8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB309922B335341009618D8 /* GameViewController.swift */; };
+		ECB309962B335B3F009618D8 /* ArhiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB309952B335B3F009618D8 /* ArhiveCell.swift */; };
+		ECB309992B335B76009618D8 /* GameDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB309982B335B76009618D8 /* GameDateFormatter.swift */; };
+		ECB3099B2B335BBD009618D8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3099A2B335BBD009618D8 /* Game.swift */; };
+		ECB3099E2B335C6B009618D8 /* DefaultGameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3099D2B335C6B009618D8 /* DefaultGameService.swift */; };
+		ECB309A02B335D6E009618D8 /* ArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB3099F2B335D6E009618D8 /* ArchiveViewController.swift */; };
+		ECB309A32B335E32009618D8 /* PureLayout in Frameworks */ = {isa = PBXBuildFile; productRef = ECB309A22B335E32009618D8 /* PureLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +53,14 @@
 		11110C1B2B049C7D0048AE8D /* pokerprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pokerprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11110C1F2B049C7D0048AE8D /* pokerprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokerprojectUITests.swift; sourceTree = "<group>"; };
 		11110C212B049C7D0048AE8D /* pokerprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokerprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECB3098E2B3352F6009618D8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		ECB309902B335319009618D8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		ECB309922B335341009618D8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ECB309952B335B3F009618D8 /* ArhiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArhiveCell.swift; sourceTree = "<group>"; };
+		ECB309982B335B76009618D8 /* GameDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateFormatter.swift; sourceTree = "<group>"; };
+		ECB3099A2B335BBD009618D8 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		ECB3099D2B335C6B009618D8 /* DefaultGameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultGameService.swift; sourceTree = "<group>"; };
+		ECB3099F2B335D6E009618D8 /* ArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB309A32B335E32009618D8 /* PureLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +112,11 @@
 		11110C032B049C7C0048AE8D /* pokerproject */ = {
 			isa = PBXGroup;
 			children = (
+				ECB3099C2B335C5F009618D8 /* Services */,
+				ECB309972B335B6F009618D8 /* Helpers */,
+				ECB309942B335B37009618D8 /* Cells */,
+				ECB3098D2B3352C7009618D8 /* UserStory */,
+				ECB3098C2B3352C1009618D8 /* Model */,
 				11110C042B049C7C0048AE8D /* pokerprojectApp.swift */,
 				11110C062B049C7C0048AE8D /* ContentView.swift */,
 				11110C082B049C7D0048AE8D /* Assets.xcassets */,
@@ -127,6 +150,49 @@
 			path = pokerprojectUITests;
 			sourceTree = "<group>";
 		};
+		ECB3098C2B3352C1009618D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECB3098E2B3352F6009618D8 /* Player.swift */,
+				ECB3099A2B335BBD009618D8 /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECB3098D2B3352C7009618D8 /* UserStory */ = {
+			isa = PBXGroup;
+			children = (
+				ECB309902B335319009618D8 /* MainViewController.swift */,
+				ECB309922B335341009618D8 /* GameViewController.swift */,
+				ECB3099F2B335D6E009618D8 /* ArchiveViewController.swift */,
+			);
+			path = UserStory;
+			sourceTree = "<group>";
+		};
+		ECB309942B335B37009618D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ECB309952B335B3F009618D8 /* ArhiveCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ECB309972B335B6F009618D8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECB309982B335B76009618D8 /* GameDateFormatter.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ECB3099C2B335C5F009618D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECB3099D2B335C6B009618D8 /* DefaultGameService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +209,9 @@
 			dependencies = (
 			);
 			name = pokerproject;
+			packageProductDependencies = (
+				ECB309A22B335E32009618D8 /* PureLayout */,
+			);
 			productName = pokerproject;
 			productReference = 11110C012B049C7C0048AE8D /* pokerproject.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 11110BF82B049C7C0048AE8D;
+			packageReferences = (
+				ECB309A12B335E31009618D8 /* XCRemoteSwiftPackageReference "PureLayout" */,
+			);
 			productRefGroup = 11110C022B049C7C0048AE8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +329,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB309962B335B3F009618D8 /* ArhiveCell.swift in Sources */,
+				ECB309932B335341009618D8 /* GameViewController.swift in Sources */,
 				11110C072B049C7C0048AE8D /* ContentView.swift in Sources */,
+				ECB309A02B335D6E009618D8 /* ArchiveViewController.swift in Sources */,
+				ECB309992B335B76009618D8 /* GameDateFormatter.swift in Sources */,
+				ECB3098F2B3352F6009618D8 /* Player.swift in Sources */,
 				11110C052B049C7C0048AE8D /* pokerprojectApp.swift in Sources */,
+				ECB309912B335319009618D8 /* MainViewController.swift in Sources */,
+				ECB3099E2B335C6B009618D8 /* DefaultGameService.swift in Sources */,
+				ECB3099B2B335BBD009618D8 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +509,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -436,9 +517,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = team.pokerproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,6 +541,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,9 +549,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = team.pokerproject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -582,6 +670,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECB309A12B335E31009618D8 /* XCRemoteSwiftPackageReference "PureLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PureLayout/PureLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECB309A22B335E32009618D8 /* PureLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB309A12B335E31009618D8 /* XCRemoteSwiftPackageReference "PureLayout" */;
+			productName = PureLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11110BF92B049C7C0048AE8D /* Project object */;
 }
